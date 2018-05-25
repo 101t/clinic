@@ -1,0 +1,41 @@
+/***********[ TOP MENU ]************/
+.clinik-topmenu {
+	width: 100%;
+	background-color: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.clinik-topmenu div.wrapper {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	padding: .35rem 0.9rem;
+}
+.clinik-topmenu .mnu-left {
+	line-height: 28px;
+	display: inline-block;
+}
+.clinik-topmenu .mnu-right {
+	float: right;
+	display: inline-block;
+}
+.clinik-topmenu .mnu-right ul li{
+	list-style: none;
+	display: inline-block;
+}
+/***********[ TOP MENU ]************/
+/***********[ MAIN MENU ]************/
+.clinik-mainmenu {
+	position: absolute;
+	top:32px;
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	left: 0;right:0;
+
+	min-height: 60px;
+	border:1px solid transparent;
+	background-color: #eee;
+}
+/***********[ MAIN MENU ]************/
