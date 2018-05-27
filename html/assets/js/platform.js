@@ -1,12 +1,12 @@
-jQuery.noConflict();
+//jQuery.noConflict();
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-(function($) {
+$(function() {
     function menuPosition() {
 
         var position4menu = $(window).width() <= 681 ? "0px" : "36px";
         var scrollpos = $(window).scrollTop();
-        var menu = $('#menu');
+        var menu = $('.clinik-mainmenu');
 
         if(scrollpos >= 36) {
             menu.css({
@@ -14,13 +14,13 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
                 "left" : "0",
                 "position" : "fixed",
                 "z-index" : "6",
-            });
+            }).addClass('s-header__shrink');
         }
         else {
             menu.css({
                 "position" : "absolute",
                 "top" : position4menu,
-            });
+            }).removeClass('s-header__shrink');
         }
     }
 
@@ -34,4 +34,4 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
             });
         });
     }
-})(jQuery);
+});

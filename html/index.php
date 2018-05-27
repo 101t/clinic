@@ -13,16 +13,18 @@
 	<meta name="country" content="Turkey">
 	<meta name="Language" content="Turkish">
 	<meta name="Copyright" content="Dr Selim Balim">
-	<meta name="Author" content="Dr Selim Balim - www.drsalimbalinclinic.com">
+	<meta name="Author" content="Dr Selim Balim - www.drsalimbalimclinic.com">
 	<meta name="robots" content="INDEX|FOLLOW">
 	<title>Dr Selim Balim Clinic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 </head>
 <body>
 	<?php include 'includes/menu.php'; ?>
-	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/popper.min.js"></script>
-	<script type="text/javascript" src="assets/libs/bs/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/platform.js"></script>
+	<?php include 'includes/home-slider.php'; ?>
+	<?php include 'includes/home-content.php'; ?>
+	<?php include 'includes/js-libs.php'; ?>
+	<?php include 'includes/footer.php'; ?>
 </body>
 </html>
