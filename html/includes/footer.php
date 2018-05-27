@@ -5,10 +5,12 @@
             <div class="row">
                 <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                     <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Home</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="/">Home</a></li>
                         <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">About</a></li>
-                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Work</a></li>
-                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Contact</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">FAQ</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Videos</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Blog</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Contacts</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
@@ -27,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
-                    <h3 class="g-font-size-18--xs g-color--white">Megakit</h3>
+                    <h3 class="g-font-size-18--xs g-color--white">Dr. Selim Balin Clinic</h3>
                     <p class="g-color--white-opacity">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
                 </div>
             </div>
@@ -39,12 +41,12 @@
     <div class="container g-padding-y-50--xs">
         <div class="row">
             <div class="col-xs-6">
-                <a href="index.html">
-                    <img class="g-width-100--xs g-height-auto--xs" src="assets/img/logo.png" alt="Dr Selim Balim">
+                <a href="javascript:void(0)">
+                    <img class="g-width-100--xs g-height-auto--xs" src="assets/img/logo-footer.png" alt="Dr Selim Balin">
                 </a>
             </div>
             <div class="col-xs-6 g-text-right--xs">
-                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"><a href="http://drselimbalim.com/">Dr Selim Balim</a> All right reserved</p>
+                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"><a href="http://drselimbalin.com/">Op. Dr. Selim Balin</a> All right reserved</p>
             </div>
         </div>
     </div>

@@ -675,7 +675,7 @@
                             <textarea class="form-control s-form-v4__input g-padding-l-0--xs" rows="5" placeholder="* What ails you?"></textarea>
                         </div>
                         <div class="g-text-center--xs">
-                            <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Submit</button>
+                            <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Send</button>
                         </div>
                     </form>
                 </div>
@@ -692,7 +692,7 @@
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-location-pin"></i>
                             </div>
                             <div class="g-media__body">
-                                277 Bedford Avenue, <br> Brooklyn, NY 11211, New York
+                                2776 Şişli Akmerkez, Deniz Cad. <br> 34 İstanbul, Türkiye
                             </div>
                         </li>
                         <li class="clearfix g-color--white g-margin-b-40--xs">
@@ -700,7 +700,7 @@
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-headphone-alt"></i>
                             </div>
                             <div class="g-media__body">
-                                + (1) 001 389 3720
+                                + (90) 341 389 3720
                             </div>
                         </li>
                         <li class="clearfix g-color--white g-margin-b-40--xs">
@@ -708,7 +708,7 @@
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-email"></i>
                             </div>
                             <div class="g-media__body">
-                                support@drselimbalimclinic.com
+                                info@drselimbalin.com
                             </div>
                         </li>
                     </ul>

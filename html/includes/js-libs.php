@@ -19,3 +19,4 @@
 <script type="text/javascript" src="assets/libs/components/equal-height.min.js"></script>
 <script type="text/javascript" src="assets/libs/components/parallax.min.js"></script>
 <script type="text/javascript" src="assets/libs/components/wow.min.js"></script>
+<script type="text/javascript" src="assets/libs/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>

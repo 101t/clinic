@@ -5,7 +5,8 @@
 @import "../libs/themify/themify.css";
 @import "../libs/scrollbar/scrollbar.min.css";
 @import "../libs/swiper/swiper.min.css";
-@import "animation.css";
+@import "../libs/cubeportfolio/css/cubeportfolio.min.css";
+@import "animate.css";
 @import "style.css";
 @import "global/global.css";
 @import "custom.css";
