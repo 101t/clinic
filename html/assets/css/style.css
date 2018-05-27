@@ -1642,7 +1642,7 @@ fieldset[disabled] .s-btn {
   position: relative;
   z-index: 1000;
   min-height: 3.125rem;
-  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  /*border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);*/
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);

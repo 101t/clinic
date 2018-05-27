@@ -6,10 +6,10 @@
             </div>
             <div class="mnu-right">
                 <ul>
-                    <li><a href="javascript:void(0)">TR</a></li>
-                    <li><a href="javascript:void(0)">EN</a></li>
-                    <li><a href="javascript:void(0)">FR</a></li>
-                    <li><a href="javascript:void(0)">AR</a></li>
+                    <li><a href="javascript:void(0)"><img src="assets/img/flags/tr.svg" width="26"></a></li>
+                    <li><a href="javascript:void(0)"><img src="assets/img/flags/en.svg" width="26"></a></li>
+                    <li><a href="javascript:void(0)"><img src="assets/img/flags/fr.svg" width="26"></a></li>
+                    <li><a href="javascript:void(0)"><img src="assets/img/flags/ar.svg" width="26"></a></li>
                 </ul>
             </div>
         </div>
