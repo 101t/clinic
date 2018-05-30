@@ -708,7 +708,7 @@
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-email"></i>
                             </div>
                             <div class="g-media__body">
-                                info@drselimbalin.com
+                                info@drsalimbalin.com
                             </div>
                         </li>
                     </ul>

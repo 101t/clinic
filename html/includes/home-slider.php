@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="s-promo-block-v4 g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('assets/img/bg/13.jpg');">
+        <div class="s-promo-block-v4 g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('assets/img/bg/01.jpg');">
             <div class="container g-text-right--xs g-ver-center--xs">
                 <div class="row">
                     <div class="col-md-7 col-md-offset-5">

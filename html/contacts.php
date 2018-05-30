@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="description" name="description" content="Hair clinic, Dr Selim Balin">
+	<meta http-equiv="description" name="description" content="Hair clinic, Dr Salim Balin">
 	<meta http-equiv="keywords" name="keywords" content="Hair, clinic, istanbul, turkey">
 	<meta http-equiv="identifier-url" name="Identifier-URL" content="">
 	<meta http-equiv="revisit-after" name="Revisit-after" content="1 days">
@@ -12,10 +12,10 @@
 	<meta name="Geography" content="Turkey">
 	<meta name="country" content="Turkey">
 	<meta name="Language" content="Turkish">
-	<meta name="Copyright" content="Dr Selim Balin">
-	<meta name="Author" content="Dr Selim Balin - www.drsalimbalin.com">
+	<meta name="Copyright" content="Dr Salim Balin">
+	<meta name="Author" content="Dr Salim Balin - www.drsalimbalin.com">
 	<meta name="robots" content="INDEX|FOLLOW">
-	<title>Dr Selim Balin Clinic</title>
+	<title>Dr Salim Balin Clinic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -35,7 +35,7 @@
 	                <div class="g-text-center--xs">
 	                    <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-email"></i>
 	                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Email</h4>
-	                    <p class="g-color--white-opacity">info@drselimbalin.com</p>
+	                    <p class="g-color--white-opacity">info@drsalimbalin.com</p>
 	                </div>
 	            </div>
 	            <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">

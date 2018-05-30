@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="description" name="description" content="Hair clinic, Dr Selim Balin">
+	<meta http-equiv="description" name="description" content="Hair clinic, Dr Salim Balin">
 	<meta http-equiv="keywords" name="keywords" content="Hair, clinic, istanbul, turkey">
 	<meta http-equiv="identifier-url" name="Identifier-URL" content="">
 	<meta http-equiv="revisit-after" name="Revisit-after" content="1 days">
@@ -12,10 +12,10 @@
 	<meta name="Geography" content="Turkey">
 	<meta name="country" content="Turkey">
 	<meta name="Language" content="Turkish">
-	<meta name="Copyright" content="Dr Selim Balin">
-	<meta name="Author" content="Dr Selim Balin - www.drsalimbalin.com">
+	<meta name="Copyright" content="Dr Salim Balin">
+	<meta name="Author" content="Dr Salim Balin - www.drsalimbalin.com">
 	<meta name="robots" content="INDEX|FOLLOW">
-	<title>Dr Selim Balin Clinic</title>
+	<title>Dr Salim Balin Clinic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -25,7 +25,7 @@
 	<!--========== PROMO BLOCK ==========-->
 	<div class="g-bg-position--center js__parallax-window" style="background: url(assets/img/bg/09.jpg) 50% 0 no-repeat fixed;">
 	    <div class="g-container--md g-text-center--xs g-padding-y-150--xs">
-	        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Dr. Selim Balin Clinik</p>
+	        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Dr. Salim Balin Clinik</p>
 	        <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">Our Blog</h1>
 	    </div>
 	</div>

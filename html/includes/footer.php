@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
-                    <h3 class="g-font-size-18--xs g-color--white">Dr. Selim Balin Clinic</h3>
+                    <h3 class="g-font-size-18--xs g-color--white">Dr. Salim Balin Clinic</h3>
                     <p class="g-color--white-opacity">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
                 </div>
             </div>
@@ -42,11 +42,11 @@
         <div class="row">
             <div class="col-xs-6">
                 <a href="javascript:void(0)">
-                    <img class="g-width-100--xs g-height-auto--xs" src="assets/img/logo-footer.png" alt="Dr Selim Balin">
+                    <img class="g-width-200--xs g-height-auto--xs" src="assets/img/logo-footer.png" alt="Dr Salim Balin">
                 </a>
             </div>
             <div class="col-xs-6 g-text-right--xs">
-                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"><a href="http://drselimbalin.com/">Op. Dr. Selim Balin</a> All right reserved</p>
+                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"><a href="http://drsalimbalin.com/">Op. Dr. Salim Balin</a> All right reserved</p>
             </div>
         </div>
     </div>

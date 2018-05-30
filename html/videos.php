@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="description" name="description" content="Hair Transplantation clinic, Dr Selim Balin">
+	<meta http-equiv="description" name="description" content="Hair Transplantation clinic, Dr Salim Balin">
 	<meta http-equiv="keywords" name="keywords" content="Hair, clinic, Istanbul, turkey">
 	<meta http-equiv="identifier-url" name="Identifier-URL" content="">
 	<meta http-equiv="revisit-after" name="Revisit-after" content="1 days">
@@ -12,10 +12,10 @@
 	<meta name="Geography" content="Turkey">
 	<meta name="country" content="Turkey">
 	<meta name="Language" content="Turkish">
-	<meta name="Copyright" content="Dr Selim Balin">
-	<meta name="Author" content="Dr Selim Balin - www.drsalimbalin.com">
+	<meta name="Copyright" content="Dr Salim Balin">
+	<meta name="Author" content="Dr Salim Balin - www.drsalimbalin.com">
 	<meta name="robots" content="INDEX|FOLLOW">
-	<title>Dr Selim Balin Clinic</title>
+	<title>Dr Salim Balin Clinic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -63,11 +63,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h3 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h3>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/04.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/04.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>
@@ -87,11 +87,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h4>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/09.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/09.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>
@@ -111,11 +111,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h4>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/05.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/05.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>
@@ -135,11 +135,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h4>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/06.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/06.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>
@@ -159,11 +159,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h4>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/07.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/07.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>
@@ -183,11 +183,11 @@
 	                    <div class="s-portfolio__caption-hover--cc">
 	                        <div class="g-margin-b-25--xs">
 	                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Operation Video</h4>
-	                            <p class="g-color--white-opacity">by Dr. Selim Balin.</p>
+	                            <p class="g-color--white-opacity">by Dr. Salim Balin.</p>
 	                        </div>
 	                        <ul class="list-inline g-ul-li-lr-5--xs g-margin-b-0--xs">
 	                            <li>
-	                                <a href="assets/img/970x647/08.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Selim Balin.">
+	                                <a href="assets/img/970x647/08.jpg" class="cbp-lightbox s-icon s-icon--sm s-icon--white-bg g-radius--circle" data-title="Operation Video <br/> by Dr. Salim Balin.">
 	                                    <i class="ti-fullscreen"></i>
 	                                </a>
 	                            </li>

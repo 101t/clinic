@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="description" name="description" content="Hair clinic, Dr Selim Balin">
+	<meta http-equiv="description" name="description" content="Hair clinic, Dr Salim Balin">
 	<meta http-equiv="keywords" name="keywords" content="Hair, clinic, istanbul, turkey">
 	<meta http-equiv="identifier-url" name="Identifier-URL" content="">
 	<meta http-equiv="revisit-after" name="Revisit-after" content="1 days">
@@ -12,10 +12,10 @@
 	<meta name="Geography" content="Turkey">
 	<meta name="country" content="Turkey">
 	<meta name="Language" content="Turkish">
-	<meta name="Copyright" content="Dr Selim Balin">
-	<meta name="Author" content="Dr Selim Balin - www.drsalimbalin.com">
+	<meta name="Copyright" content="Dr Salim Balin">
+	<meta name="Author" content="Dr Salim Balin - www.drsalimbalin.com">
 	<meta name="robots" content="INDEX|FOLLOW">
-	<title>Dr Selim Balin Clinic</title>
+	<title>Dr Salim Balin Clinic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/base.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -25,7 +25,7 @@
 	<!--========== PROMO BLOCK ==========-->
 	<div class="g-bg-position--center js__parallax-window" style="background: url(assets/img/bg/10.jpg) 50% 0 no-repeat fixed;">
 	    <div class="g-container--md g-text-center--xs g-padding-y-150--xs">
-	        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Dr. Selim Balin Clinik</p>
+	        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Dr. Salim Balin Clinik</p>
 	        <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">About</h1>
 	    </div>
 	</div>
@@ -40,7 +40,7 @@
 	                    <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">Dr.</h2>
 	                </div>
 	                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
-	                    <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">Selim Balin Clinic</h2>
+	                    <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">Salim Balin Clinic</h2>
 	                </div>
 	            </div>
 	            <div class="col-md-4 col-md-offset-1">
@@ -62,7 +62,7 @@
                         <img class="img-responsive g-width-100-percent--xs" src="assets/img/400x400/03.jpg" alt="Image">
                         <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
                             <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
-                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Op. Dr. Selim Balin</h4>
+                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Op. Dr. Salim Balin</h4>
                             </div>
                             <p class="g-font-weight--700">General Surgeon</p>
                             <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
