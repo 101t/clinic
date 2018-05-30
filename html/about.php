@@ -54,39 +54,39 @@
 	    </div>
 	</div>
 	<!-- Speakers -->
-        <div class="container g-padding-y-80--xs g-padding-y-125--sm">
-            <div class="row g-overflow--hidden">
-                <div class="col-xs-6 g-full-width--xs g-margin-b-30--xs g-margin-b-0--lg">
-                    <!-- Speaker -->
-                    <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                        <img class="img-responsive g-width-100-percent--xs" src="assets/img/400x400/03.jpg" alt="Image">
-                        <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
-                            <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
-                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Op. Dr. Salim Balin</h4>
-                            </div>
-                            <p class="g-font-weight--700">General Surgeon</p>
-                            <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
+    <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+        <div class="row g-overflow--hidden">
+            <div class="col-xs-6 g-full-width--xs g-margin-b-30--xs g-margin-b-0--lg">
+                <!-- Speaker -->
+                <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
+                    <img class="img-responsive g-width-100-percent--xs" src="assets/img/400x400/03.jpg" alt="Image">
+                    <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
+                        <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
+                            <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Op. Dr. Salim Balin</h4>
                         </div>
+                        <p class="g-font-weight--700">General Surgeon</p>
+                        <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
                     </div>
-                    <!-- End Speaker -->
                 </div>
-                <div class="col-xs-6 g-full-width--xs">
-                    <!-- Speaker -->
-                    <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
-                        <img class="img-responsive g-width-100-percent--xs" src="assets/img/400x400/01.jpg" alt="Image">
-                        <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
-                            <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
-                                <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Lucas Richardson</h4>
-                            </div>
-                            <p class="g-font-weight--700">Doctor</p>
-                            <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
+                <!-- End Speaker -->
+            </div>
+            <div class="col-xs-6 g-full-width--xs">
+                <!-- Speaker -->
+                <div class="center-block g-box-shadow__dark-lightest-v1 g-width-100-percent--xs g-width-400--lg">
+                    <img class="img-responsive g-width-100-percent--xs" src="assets/img/400x400/01.jpg" alt="Image">
+                    <div class="g-position--overlay g-padding-x-30--xs g-padding-y-30--xs g-margin-t-o-60--xs">
+                        <div class="g-bg-color--primary g-padding-x-15--xs g-padding-y-10--xs g-margin-b-20--xs">
+                            <h4 class="g-font-size-22--xs g-font-size-26--sm g-color--white g-margin-b-0--xs">Lucas Richardson</h4>
                         </div>
+                        <p class="g-font-weight--700">Doctor</p>
+                        <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
                     </div>
-                    <!-- End Speaker -->
                 </div>
+                <!-- End Speaker -->
             </div>
         </div>
-        <!-- End Speakers -->
+    </div>
+    <!-- End Speakers -->
 	<!-- End Culture -->
 	<?php include 'includes/js-libs.php'; ?>
 	<?php include 'includes/footer.php'; ?>
