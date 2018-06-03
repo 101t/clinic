@@ -25,8 +25,34 @@ Route::group([
 });
 
 Route::group([
-	'prefix' => '/admin'
+	'prefix' => '/admin',
+	'namespace' => 'Admin'
 	], function(){
-	Auth::routes();
-	Route::get('/home', 'HomeController@index')->name('home');
+		Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+		Route::post('login', 'Auth\LoginController@login');
+		Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+		// Registration Routes...
+		Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+		Route::post('register', 'Auth\RegisterController@register');
+
+		// Password Reset Routes...
+		Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+		Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+		Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+		Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+		Route::get('/', 'HomeController@index')->name('admin:home');
+		// Content
+		Route::group([
+			'prefix' => '/content',
+			'namespace' => 'Content'
+			], function(){
+				//Faq
+				Route::match(['get', 'post'], '/faq/manage', 'FaqController@manage')->name('admin:content_faq_manage');
+				Route::get('/faq/', 'FaqController@index')->name('admin:content_faq');
+				// Slider
+				Route::match(['get', 'post'], '/manage', 'SliderController@manage')->name('admin:content_slider_manage');
+				Route::get('/', 'SliderController@index')->name('admin:content_slider');
+		});
 });

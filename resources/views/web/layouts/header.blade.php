@@ -12,7 +12,7 @@
                     <li><a href="javascript:void(0)"><img src="assets/img/flags/fr.svg" width="26"></a></li>-->
                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                         <a rel="alternate" hreflang="{{ $properties['native'] }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            <img src="{{ asset('assets/img/flags/'.$localeCode.'.svg') }}" width="26">
+                            <img src="{{ asset('assets/img/flags/'.$localeCode.'.svg') }}" alt="{{ $properties['native'] }}" width="26">
                         </a>
                     @endforeach
                 </ul>
