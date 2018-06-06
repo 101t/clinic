@@ -57,6 +57,7 @@
 					<div class="form-group">
 						<label>{{ __('Background Image') }}</label><br>
 						<input type="file" name="img" required>
+						<small class="form-text text-muted">{{ __("Image size must be 1920x1080 pixel and *.jpg format") }}</small>
 					</div>
 					<div class="form-group">
 						<div class="form-check-inline">

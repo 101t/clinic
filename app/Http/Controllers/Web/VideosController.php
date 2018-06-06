@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 class VideosController extends Controller{
 	public function __construct(){
-		$this->middleware('guest');
+		//$this->middleware('guest');
 	}
 	public function index(){
 		return view('web.videos');

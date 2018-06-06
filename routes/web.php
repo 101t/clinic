@@ -26,7 +26,8 @@ Route::group([
 
 Route::group([
 	'prefix' => '/admin',
-	'namespace' => 'Admin'
+	'namespace' => 'Admin',
+	'middleware' => 'auth',
 	], function(){
 		Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 		Route::post('login', 'Auth\LoginController@login');
@@ -42,7 +43,7 @@ Route::group([
 		Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 		Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-		Route::get('/', 'HomeController@index')->name('admin:home');
+		Route::get('/home', 'HomeController@index')->name('admin:home');
 		// Content
 		Route::group([
 			'prefix' => '/content',
@@ -50,9 +51,24 @@ Route::group([
 			], function(){
 				//Faq
 				Route::match(['get', 'post'], '/faq/manage', 'FaqController@manage')->name('admin:content_faq_manage');
-				Route::get('/faq/', 'FaqController@index')->name('admin:content_faq');
+				Route::get('/faq', 'FaqController@index')->name('admin:content_faq');
 				// Slider
 				Route::match(['get', 'post'], '/manage', 'SliderController@manage')->name('admin:content_slider_manage');
 				Route::get('/', 'SliderController@index')->name('admin:content_slider');
+				// Videos
+				Route::match(['get', 'post'], '/videos/manage', 'VideosController@manage')->name('admin:content_videos_manage');
+				Route::get('/videos', 'VideosController@index')->name('admin:content_videos');
+		});
+		Route::group([
+			'prefix' => '/blog',
+			'namespace' => 'Blog'
+			], function(){
+				// Blog
+				Route::resource('/posts', 'PostController');
+			    Route::put('/posts/{post}/publish', 'PostController@publish')->middleware('admin');
+			    Route::resource('/categories', 'CategoryController', ['except' => ['show']]);
+			    Route::resource('/tags', 'TagController', ['except' => ['show']]);
+			    Route::resource('/comments', 'CommentController', ['only' => ['index', 'destroy']]);
+			    Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
 		});
 });
