@@ -1,11 +1,7 @@
-<script type="text/javascript" src="{{ asset('admin/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/js/jquery.slimscroll.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/js/sidebarmenu.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/bs4/js/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/bs4/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/owl/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/owl/owl.carousel-init.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/sweetalert/sweetalert.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/libs/toastr/toastr.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('admin/js/scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/vendors.bundle.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/scripts.bundle.js') }}"></script>
+<script>
+$(window).on('load', function() {
+    $('body').removeClass('m-page--loading');
+});
+</script>

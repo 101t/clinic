@@ -22,14 +22,15 @@
 						output += '<td>'+val.lang+'</td>';
 						output += '<td class="text-center">'+
 							'<div class="dropdown">'+
-								'<button type="button" class="btn btn-default px-1 py-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'+
-									'<i class="fa fa-cog"></i>'+
-								'</button>'+
-								'<div class="dropdown-menu dropdown-menu-right">'+
-									'<a class="dropdown-item" href="javascript:void(0)" onclick="return collection_manage(\'edit\', '+val.id+')">'+main_trans['edit']+'</a>'+
-									'<a class="dropdown-item" href="javascript:void(0)" onclick="return collection_manage(\'delete\', '+val.id+')">'+main_trans['delete']+'</a>'+
+								'<span style="overflow: visible; width: 110px;">'+
+								'<div class="dropdown">'+
+									'<a href="#" class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown"><i class="la la-ellipsis-h"></i></a>'+
+									'<div class="dropdown-menu dropdown-menu-right">'+
+										'<a class="dropdown-item" href="javascript:void(0)" onclick="return collection_manage(\'edit\', '+val.id+')"><i class="la la-edit"></i> '+main_trans['edit']+'</a>'+
+										'<a class="dropdown-item" href="javascript:void(0)" onclick="return collection_manage(\'delete\', '+val.id+')"><i class="la la-trash"></i> '+main_trans['delete']+'</a>'+
+									'</div>'+
 								'</div>'+
-							'</div>'+
+							'</span>'+
 						'</td>';
 						output += '</tr>';
 					});
@@ -77,12 +78,12 @@
                 text: main_trans["youwontabletorevertthis"],
                 type: 'warning',
                 showCancelButton: true,
-                cancelButtonClass: "btn btn-default btn-sm",
-                cancelButtonHtml: main_trans["no"],
-                confirmButtonClass: "btn btn-danger btn-sm",
-                confirmButtonHtml: main_trans["yes"],
-            }, (function(result) {
-                if (result) {
+                cancelButtonClass: "btn btn-secondary m-btn m-btn--pill m-btn--icon",
+                cancelButtonText: "<span><i class='la la-close'></i><span>"+main_trans["no"]+"</span>",
+                confirmButtonClass: "btn btn-danger m-btn m-btn--pill m-btn--air m-btn--icon",
+                confirmButtonText: "<span><i class='la la-trash-o'></i><span>"+main_trans["yes"]+"</span></span>",
+            }).then(function(result) {
+                if (result.value) {
                     $.ajax({
                     	type: "POST",
                     	url: url2action,
@@ -102,7 +103,7 @@
 						}
                     })
                 }
-            }));
+            });
 		}
 	}
 	collection_manage("list", -1);

@@ -11,23 +11,30 @@
 	@include('admin.layouts.css')
 	@yield('css')
 </head>
-<body class="fix-header fix-sidebar">
-<div class="preloader">
-<svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-</div>
-<div id="main-wrapper">
-	@include('admin.layouts.header')
-	@include('admin.layouts.sidebar')
-	<div class="page-wrapper">
-		<div class="container">
-            <div class="row">
-                @include('flash::message')
-            </div>
-        </div>
-		@yield('content')
-		@include('admin.layouts.footer')
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+<div class="m-page-loader m-page-loader--base">
+	<div class="m-blockui">
+		<span>
+			{{ __("Please wait...") }}
+		</span>
+		<span>
+			<div class="m-loader m-loader--brand"></div>
+		</span>
 	</div>
 </div>
+<div class="m-grid m-grid--hor m-grid--root m-page">
+	@include('admin.layouts.header')
+	<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+		@include('admin.layouts.sidebar')
+		@yield('content')
+	</div>
+	@include('admin.layouts.footer')
+</div>
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+	<i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->
 @include('admin.layouts.js')
 @yield('js')
 </body>
