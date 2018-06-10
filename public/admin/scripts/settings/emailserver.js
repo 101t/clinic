@@ -17,9 +17,11 @@
 					$.each(value, function(i, val){
 						output += '<tr>';
 						output += '<td>'+(i+1)+'</td>';
-						output += '<td>'+val.name+'</td>';
-						output += '<td>'+(val.img ?'<a href="'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
-						output += '<td>'+val.lang+'</td>';
+						output += '<td>'+val.server+'</td>';
+						output += '<td>'+val.port+'</td>';
+						output += '<td>'+(val.ssl ? '<i class="fa fa-check-circle text-success"></i>': '<i class="fa fa-times-circle text-danger"></i>')+'</td>';
+						output += '<td>'+(val.active ? '<i class="fa fa-check-circle text-success"></i>': '<i class="fa fa-times-circle text-danger"></i>')+'</td>';
+						output += '<td>'+val.username+'</td>';
 						output += '<td class="text-center">'+
 							'<div class="dropdown">'+
 								'<span style="overflow: visible; width: 110px;">'+
@@ -41,7 +43,11 @@
 				}
 			});
 		} else if (cmd == "add") {
-			$("#addeditmodal .modal-title").html(main_trans["addslide"]);
+			if ($("#collectionlist tr").length > 0) {
+				toastr.error(main_trans["youcannotaddmorethanoneserver"], {closeButton: true, progressBar: true,});
+				return false;
+			}
+			$("#addeditmodal .modal-title").html(main_trans["addemailserver"]);
 			$("#addeditmodal input[name=id]").val(-1);
 			$("#addeditmodal input[name=s]").val('add');
 			$("#addeditmodal").modal("show");
@@ -58,12 +64,13 @@
 				dataType: "json",
 				success: function(data){
 					var value = data;
-					$("#addeditmodal .modal-title").html(main_trans["editslide"]);
-					$("#addeditmodalform input[name=name]").val(value.name);
-					$("#addeditmodalform textarea[name=body]").val(value.body);
-					$("#addeditmodalform input[name=float]").val(value.done == 1 ? 'true': 'false');
-					$("#addeditmodalform input[name=url]").val(value.url);
-					$("#addeditmodalform select[name=lang]").val(value.lang);
+					$("#addeditmodal .modal-title").html(main_trans["editemailserver"]);
+					$("#addeditmodalform input[name=server]").val(value.server);
+					$("#addeditmodalform input[name=port]").val(value.port);
+					$("#addeditmodalform input[name=username]").val(value.username);
+					$("#addeditmodalform input[name=password]").val(value.password);
+					$("#addeditmodalform input[name=ssl]").prop('checked', value.ssl);
+					$("#addeditmodalform input[name=active]").prop('checked', value.active);
 					$("#addeditmodalform input[name=s]").val("edit");
 					$("#addeditmodalform input[name=id]").val(value.id);
 					$("#addeditmodal").modal("show");

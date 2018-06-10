@@ -41,7 +41,7 @@
 				}
 			});
 		} else if (cmd == "add") {
-			$("#addeditmodal .modal-title").html(main_trans["addslide"]);
+			$("#addeditmodal .modal-title").html(main_trans["addnews"]);
 			$("#addeditmodal input[name=id]").val(-1);
 			$("#addeditmodal input[name=s]").val('add');
 			$("#addeditmodal").modal("show");
@@ -58,11 +58,10 @@
 				dataType: "json",
 				success: function(data){
 					var value = data;
-					$("#addeditmodal .modal-title").html(main_trans["editslide"]);
+					$("#addeditmodal .modal-title").html(main_trans["editnews"]);
 					$("#addeditmodalform input[name=name]").val(value.name);
 					$("#addeditmodalform textarea[name=body]").val(value.body);
-					$("#addeditmodalform input[name=float]").val(value.done == 1 ? 'true': 'false');
-					$("#addeditmodalform input[name=url]").val(value.url);
+					$("#img_url").html(value.img ? '<a href="'+value.img+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
 					$("#addeditmodalform select[name=lang]").val(value.lang);
 					$("#addeditmodalform input[name=s]").val("edit");
 					$("#addeditmodalform input[name=id]").val(value.id);

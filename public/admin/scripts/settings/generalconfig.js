@@ -18,7 +18,8 @@
 						output += '<tr>';
 						output += '<td>'+(i+1)+'</td>';
 						output += '<td>'+val.name+'</td>';
-						output += '<td>'+(val.img ?'<a href="'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
+						output += '<td>'+val.website+'</td>';
+						output += '<td>'+val.email+'</td>';
 						output += '<td>'+val.lang+'</td>';
 						output += '<td class="text-center">'+
 							'<div class="dropdown">'+
@@ -41,7 +42,11 @@
 				}
 			});
 		} else if (cmd == "add") {
-			$("#addeditmodal .modal-title").html(main_trans["addslide"]);
+			if ($("#collectionlist tr").length > 0) {
+				toastr.error(main_trans["youcannotaddmorethanoneserver"], {closeButton: true, progressBar: true,});
+				return false;
+			}
+			$("#addeditmodal .modal-title").html(main_trans["addemailserver"]);
 			$("#addeditmodal input[name=id]").val(-1);
 			$("#addeditmodal input[name=s]").val('add');
 			$("#addeditmodal").modal("show");
@@ -58,11 +63,47 @@
 				dataType: "json",
 				success: function(data){
 					var value = data;
-					$("#addeditmodal .modal-title").html(main_trans["editslide"]);
+					$("#addeditmodal .modal-title").html(main_trans["editemailserver"]);
 					$("#addeditmodalform input[name=name]").val(value.name);
-					$("#addeditmodalform textarea[name=body]").val(value.body);
-					$("#addeditmodalform input[name=float]").val(value.done == 1 ? 'true': 'false');
-					$("#addeditmodalform input[name=url]").val(value.url);
+					$("#logo_url").html(value.logo ? '<a href="'+value.logo+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#logo2_url").html(value.logo2 ? '<a href="'+value.logo2+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#favicon_url").html(value.favicon ? '<a href="'+value.favicon+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#footer_url").html(value.footer ? '<a href="'+value.footer+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#addeditmodalform textarea[name=short_about]").val(value.short_about);
+					$("#addeditmodalform textarea[name=short_services]").val(value.short_services);
+					$("#addeditmodalform textarea[name=short_blog]").val(value.short_blog);
+					$("#addeditmodalform textarea[name=short_faq]").val(value.short_faq);
+					$("#addeditmodalform textarea[name=meta_description]").val(value.meta_description);
+					$("#addeditmodalform textarea[name=meta_keywords]").val(value.meta_keywords);
+					$("#addeditmodalform textarea[name=google_analytics]").val(value.google_analytics);
+					$("#addeditmodalform textarea[name=about]").val(value.about);
+					$("#addeditmodalform textarea[name=address]").val(value.address);
+
+					$("#addeditmodalform input[name=phone1]").val(value.phone1);
+					$("#addeditmodalform input[name=phone2]").val(value.phone2);
+					$("#addeditmodalform input[name=mobile]").val(value.mobile);
+					$("#addeditmodalform input[name=fax]").val(value.fax);
+					$("#addeditmodalform input[name=website]").val(value.website);
+					$("#addeditmodalform input[name=email]").val(value.email);
+					$("#addeditmodalform input[name=reset_password]").prop('checked', value.reset_password);
+					$("#addeditmodalform input[name=theme]").val(value.theme);
+					$("#addeditmodalform input[name=welcome]").val(value.welcome);
+					$("#addeditmodalform input[name=facebook]").val(value.facebook);
+					$("#addeditmodalform input[name=whatsapp]").val(value.whatsapp);
+					$("#addeditmodalform input[name=viber]").val(value.viber);
+					$("#addeditmodalform input[name=skype]").val(value.skype);
+					$("#addeditmodalform input[name=linkedin]").val(value.linkedin);
+					$("#addeditmodalform input[name=twitter]").val(value.twitter);
+					$("#addeditmodalform input[name=instagram]").val(value.instagram);
+					$("#addeditmodalform input[name=google]").val(value.google);
+					$("#addeditmodalform input[name=youtube]").val(value.youtube);
+					$("#addeditmodalform input[name=vimeo]").val(value.vimeo);
+					$("#addeditmodalform textarea[name=useterms]").val(value.useterms);
+					$("#addeditmodalform textarea[name=privacypolicy]").val(value.privacypolicy);
+					$("#addeditmodalform input[name=latitude]").val(value.latitude);
+					$("#addeditmodalform input[name=longitude]").val(value.longitude);
+					$("#addeditmodalform textarea[name=copyright]").val(value.copyright);
+
 					$("#addeditmodalform select[name=lang]").val(value.lang);
 					$("#addeditmodalform input[name=s]").val("edit");
 					$("#addeditmodalform input[name=id]").val(value.id);

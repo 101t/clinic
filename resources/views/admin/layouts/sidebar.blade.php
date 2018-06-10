@@ -51,6 +51,18 @@
                                 <span class="m-menu__link-text">{{ __("Videos") }}</span>
                             </a>
                         </li>
+                        <li class="m-menu__item " aria-haspopup="true" id="services_menu">
+                            <a href="{{ route('admin:content_services') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __("Services") }}</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" id="news_menu">
+                            <a href="{{ route('admin:content_news') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                               <span class="m-menu__link-text">{{ __("News") }}</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -85,6 +97,60 @@
                             <a href="{{ url('admin/blog/tags') }}" class="m-menu__link ">
                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
                                 <span class="m-menu__link-text">{{ __('Tags') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" id="clinic_parent_menu" data-menu-submenu-toggle="hover">
+                <a  href="#" class="m-menu__link m-menu__toggle">
+                    <i class="m-menu__link-icon flaticon-share"></i>
+                    <span class="m-menu__link-text">{{ __('Clinic') }}</span>
+                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                </a>
+                <div class="m-menu__submenu ">
+                    <span class="m-menu__arrow"></span>
+                    <ul class="m-menu__subnav">
+                        <li class="m-menu__item " aria-haspopup="true" id="patientguide_menu">
+                            <a href="{{ route('admin:clinic_patientguide') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __('Patient Guide') }}</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" id="hairtrans_menu">
+                            <a href="{{ route('admin:clinic_hairtrans') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __('Hair Transplantation') }}</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" id="doctors_menu">
+                            <a href="{{ route('admin:clinic_doctors') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __('Doctors') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" id="settings_parent_menu" data-menu-submenu-toggle="hover">
+                <a  href="#" class="m-menu__link m-menu__toggle">
+                    <i class="m-menu__link-icon flaticon-share"></i>
+                    <span class="m-menu__link-text">{{ __('Settings') }}</span>
+                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                </a>
+                <div class="m-menu__submenu ">
+                    <span class="m-menu__arrow"></span>
+                    <ul class="m-menu__subnav">
+                        <li class="m-menu__item " aria-haspopup="true" id="emailserver_menu">
+                            <a href="{{ route('admin:settings_emailserver') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __('Email Server') }}</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item " aria-haspopup="true" id="generalconfig_menu">
+                            <a href="{{ route('admin:settings_generalconfig') }}" class="m-menu__link ">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i>
+                                <span class="m-menu__link-text">{{ __('General Configuration') }}</span>
                             </a>
                         </li>
                     </ul>

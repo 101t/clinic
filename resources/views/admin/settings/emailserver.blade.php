@@ -1,5 +1,5 @@
 @extends('admin.layouts.base')
-@section('title', 'Dr. Salim Balin | Videos')
+@section('title', 'Dr. Salim Balin | Email Server')
 @section('css')
 @endsection
 @section('content')
@@ -7,12 +7,12 @@
 	<div class="m-subheader ">
 		<div class="d-flex align-items-center">
 			<div class="mr-auto">
-				<h3 class="m-subheader__title m-subheader__title--separator">{{ __("Videos") }}</h3>
+				<h3 class="m-subheader__title m-subheader__title--separator">{{ __("Email Server") }}</h3>
 				<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 					<li class="m-nav__item m-nav__item--home"><a href="{{ route('admin:home') }}" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a></li>
 					<li class="m-nav__separator">-</li>
 					<li class="m-nav__item">
-						<a href="{{ route('admin:content_videos') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Videos") }}</span></a>
+						<a href="{{ route('admin:settings_emailserver') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Email Server") }}</span></a>
 					</li>
 				</ul>
 			</div>
@@ -58,14 +58,15 @@
 					</div>
 				</div>
 				<div class="table-responsive1">
-					<table class="table table-striped">
-						<thead class="thead-light">
+					<table class="table table-sm">
+						<thead>
 							<tr>
 								<th>#</th>
-								<th>{{ __("Name") }}</th>
-								<th>{{ __("Video") }}</th>
-								<th>{{ __("Image") }}</th>
-								<th>{{ __("Language") }}</th>
+								<th>{{ __("Server") }}</th>
+								<th>{{ __("Port") }}</th>
+								<th>{{ __("SSL") }}</th>
+								<th>{{ __("Active") }}</th>
+								<th>{{ __("Username") }}</th>
 								<th class="text-center">{{ __("Option") }}</th>
 							</tr>
 						</thead>
@@ -79,39 +80,44 @@
 <div class="modal" id="addeditmodal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-			<form id="addeditmodalform" action="{{ route('admin:content_videos_manage') }}" method="POST" enctype="multipart/form-data">
+			<form id="addeditmodalform" action="{{ route('admin:settings_emailserver_manage') }}" method="POST" enctype="multipart/form-data">
 				@csrf
 				<div class="modal-header">
-					<h4 class="modal-title">{{ __('Add Video') }}</h4>
+					<h4 class="modal-title">{{ __('Add Email Server') }}</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label>{{ __('Name') }}</label>
-						<input type="text" class="form-control" name="name" value="" maxlength="255" placeholder="{{ __('Name') }}" required>
+						<label>{{ __('Server') }}</label>
+						<input type="text" class="form-control" name="server" value="" maxlength="255" placeholder="{{ __('Server') }}" required>
 					</div>
 					<div class="form-group">
-						<label>{{ __('Description') }}</label>
-						<textarea class="form-control" name="body" rows="5" placeholder="{{ __('Description') }}"></textarea>
+						<label>{{ __('Port') }}</label>
+						<input type="text" class="form-control" name="port" value="" maxlength="3" placeholder="{{ __('Port') }}" required>
 					</div>
 					<div class="form-group">
-						<label>{{ __('Video URL') }}</label>
-						<input type="text" class="form-control" name="url" value="" maxlength="255" placeholder="{{ __('Video URL') }}" required>
-						<span class="muted-text" id="video_preview"></span>
+						<label>{{ __('Username') }}</label>
+						<input type="text" class="form-control" name="username" value="" maxlength="255" placeholder="{{ __('Username') }}" required>
 					</div>
 					<div class="form-group">
-						<label>{{ __('Image') }}</label><br>
-						<input type="file" name="img">
-						<small class="form-text text-muted">{{ __("Image size must be 1280x720 pixel and *.jpg format") }}</small>
-						<span class="muted-text" id="img_url"></span>
+						<label>{{ __('Password') }}</label>
+						<input type="text" class="form-control" name="password" value="" maxlength="255" placeholder="{{ __('Password') }}" required>
 					</div>
-					<div class="form-group">
-						<label>{{ __('Language') }}</label>
-						<select class="form-control custom-select" name="lang">
-							@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-		                    <option value="{{ $localeCode }}">{{ $properties['native'] }}</option>
-		                    @endforeach
-						</select>
+					<div class="form-group col-6">
+						<label>{{ __('SSL Support') }}</label><br>
+						<label class="switch switch-3d switch-primary">
+							<input type="checkbox" class="switch-input" name="ssl" id="ssl" value="ssl">
+            				<span class="switch-label"></span>
+            				<span class="switch-handle"></span>
+						</label>
+					</div>
+					<div class="form-group col-6">
+						<label>{{ __('Active') }}</label><br>
+						<label class="switch switch-3d switch-primary">
+							<input type="checkbox" class="switch-input" name="active" id="active" value="active">
+            				<span class="switch-label"></span>
+            				<span class="switch-handle"></span>
+						</label>
 					</div>
 					<input type="hidden" name="id" value="-1">
 					<input type="hidden" name="s" value="add">
@@ -124,24 +130,23 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" name="url2action" value="{{ route('admin:content_videos_manage') }}">
+<input type="hidden" name="url2action" value="{{ route('admin:settings_emailserver_manage') }}">
 @endsection
 @section('js')
 <script type="text/javascript">
-$("#content_parent_menu").addClass("m-menu__item--open").addClass("m-menu__item--expanded");
-$("#videos_menu").addClass("m-menu__item--active");
+$("#settings_parent_menu").addClass("m-menu__item--open").addClass("m-menu__item--expanded");
+$("#emailserver_menu").addClass("m-menu__item--active");
 window.main_trans = {
-	addvideo: "{{ __('Add Video') }}",
-	editvideo: "{{ __('Edit Video') }}",
+	addemailserver: "{{ __('Add Email Server') }}",
+	editemailserver: "{{ __('Edit Email Server') }}",
 	areyousuretodelete: "{{ __('Are you sure to delete?') }}",
 	no: "{{ __('No') }}",
 	yes: "{{ __('Yes') }}",
 	youwontabletorevertthis: "{{ __('You wont be able to revert this!') }}",
 	edit: "{{ __('Edit') }}",
 	delete: "{{ __('Delete') }}",
-	preview: "{{ __('Preview') }}",
-	noimage: "{{ __('No Image') }}",
+	youcannotaddmorethanoneserver: "{{ __('You cannot add more than one server') }}",
 };
 </script>
-<script type="text/javascript" src="{{ asset('admin/scripts/content/videos.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/scripts/settings/emailserver.js') }}"></script>
 @endsection

@@ -1,5 +1,5 @@
 @extends('admin.layouts.base')
-@section('title', 'Dr. Salim Balin | Videos')
+@section('title', 'Dr. Salim Balin | Doctors')
 @section('css')
 @endsection
 @section('content')
@@ -7,12 +7,12 @@
 	<div class="m-subheader ">
 		<div class="d-flex align-items-center">
 			<div class="mr-auto">
-				<h3 class="m-subheader__title m-subheader__title--separator">{{ __("Videos") }}</h3>
+				<h3 class="m-subheader__title m-subheader__title--separator">{{ __("Doctors") }}</h3>
 				<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
 					<li class="m-nav__item m-nav__item--home"><a href="{{ route('admin:home') }}" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a></li>
 					<li class="m-nav__separator">-</li>
 					<li class="m-nav__item">
-						<a href="{{ route('admin:content_videos') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Videos") }}</span></a>
+						<a href="{{ route('admin:clinic_doctors') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Doctors") }}</span></a>
 					</li>
 				</ul>
 			</div>
@@ -58,13 +58,13 @@
 					</div>
 				</div>
 				<div class="table-responsive1">
-					<table class="table table-striped">
-						<thead class="thead-light">
+					<table class="table table-sm">
+						<thead>
 							<tr>
 								<th>#</th>
 								<th>{{ __("Name") }}</th>
-								<th>{{ __("Video") }}</th>
 								<th>{{ __("Image") }}</th>
+								<th>{{ __("Major") }}</th>
 								<th>{{ __("Language") }}</th>
 								<th class="text-center">{{ __("Option") }}</th>
 							</tr>
@@ -79,10 +79,10 @@
 <div class="modal" id="addeditmodal">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-			<form id="addeditmodalform" action="{{ route('admin:content_videos_manage') }}" method="POST" enctype="multipart/form-data">
+			<form id="addeditmodalform" action="{{ route('admin:clinic_doctors_manage') }}" method="POST" enctype="multipart/form-data">
 				@csrf
 				<div class="modal-header">
-					<h4 class="modal-title">{{ __('Add Video') }}</h4>
+					<h4 class="modal-title">{{ __('Add Service') }}</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
@@ -95,14 +95,13 @@
 						<textarea class="form-control" name="body" rows="5" placeholder="{{ __('Description') }}"></textarea>
 					</div>
 					<div class="form-group">
-						<label>{{ __('Video URL') }}</label>
-						<input type="text" class="form-control" name="url" value="" maxlength="255" placeholder="{{ __('Video URL') }}" required>
-						<span class="muted-text" id="video_preview"></span>
+						<label>{{ __('Major') }}</label>
+						<input type="text" class="form-control" name="major" value="" maxlength="255" placeholder="{{ __('Major') }}" required>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Image') }}</label><br>
 						<input type="file" name="img">
-						<small class="form-text text-muted">{{ __("Image size must be 1280x720 pixel and *.jpg format") }}</small>
+						<small class="form-text text-muted">{{ __("Image size must be 1920x1080 pixel and *.jpg format") }}</small>
 						<span class="muted-text" id="img_url"></span>
 					</div>
 					<div class="form-group">
@@ -124,15 +123,15 @@
 		</div>
 	</div>
 </div>
-<input type="hidden" name="url2action" value="{{ route('admin:content_videos_manage') }}">
+<input type="hidden" name="url2action" value="{{ route('admin:clinic_doctors_manage') }}">
 @endsection
 @section('js')
 <script type="text/javascript">
-$("#content_parent_menu").addClass("m-menu__item--open").addClass("m-menu__item--expanded");
-$("#videos_menu").addClass("m-menu__item--active");
+$("#clinic_parent_menu").addClass("m-menu__item--open").addClass("m-menu__item--expanded");
+$("#doctors_menu").addClass("m-menu__item--active");
 window.main_trans = {
-	addvideo: "{{ __('Add Video') }}",
-	editvideo: "{{ __('Edit Video') }}",
+	adddoctor: "{{ __('Add Doctor') }}",
+	editdoctor: "{{ __('Edit Doctor') }}",
 	areyousuretodelete: "{{ __('Are you sure to delete?') }}",
 	no: "{{ __('No') }}",
 	yes: "{{ __('Yes') }}",
@@ -143,5 +142,5 @@ window.main_trans = {
 	noimage: "{{ __('No Image') }}",
 };
 </script>
-<script type="text/javascript" src="{{ asset('admin/scripts/content/videos.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/scripts/clinic/doctors.js') }}"></script>
 @endsection

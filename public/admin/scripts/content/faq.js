@@ -70,7 +70,7 @@
 					$("#addeditmodalform input[name=name]").val(value.name);
 					$("#addeditmodalform textarea[name=body]").val(value.body);
 					$("#addeditmodalform input[name=icon]").val(value.icon);
-					$("#addeditmodalform input[name=lang]").val(value.lang);
+					$("#addeditmodalform select[name=lang]").val(value.lang);
 					$("#addeditmodalform input[name=s]").val("edit");
 					$("#addeditmodalform input[name=id]").val(value.id);
 					$("#addeditmodal").modal("show");

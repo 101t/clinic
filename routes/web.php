@@ -58,6 +58,12 @@ Route::group([
 				// Videos
 				Route::match(['get', 'post'], '/videos/manage', 'VideosController@manage')->name('admin:content_videos_manage');
 				Route::get('/videos', 'VideosController@index')->name('admin:content_videos');
+				// Services
+				Route::match(['get', 'post'], '/services/manage', 'ServicesController@manage')->name('admin:content_services_manage');
+				Route::get('/services', 'ServicesController@index')->name('admin:content_services');
+				// News
+				Route::match(['get', 'post'], '/news/manage', 'NewsController@manage')->name('admin:content_news_manage');
+				Route::get('/news', 'NewsController@index')->name('admin:content_news');
 		});
 		Route::group([
 			'prefix' => '/blog',
@@ -70,5 +76,30 @@ Route::group([
 			    Route::resource('/tags', 'TagController', ['except' => ['show']]);
 			    Route::resource('/comments', 'CommentController', ['only' => ['index', 'destroy']]);
 			    Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
+		});
+		Route::group([
+			'prefix' => '/clinic',
+			'namespace' => 'Clinic'
+			], function(){
+				// Hair Transplantation
+				Route::match(['get', 'post'], '/hairtrans/manage', 'HairTransController@manage')->name('admin:clinic_hairtrans_manage');
+				Route::get('/hairtrans', 'HairTransController@index')->name('admin:clinic_hairtrans');
+				// Patient Guide
+				Route::match(['get', 'post'], '/patientguide/manage', 'PatientGuideController@manage')->name('admin:clinic_patientguide_manage');
+				Route::get('/patientguide', 'PatientGuideController@index')->name('admin:clinic_patientguide');
+				// Dpctors
+				Route::match(['get', 'post'], '/doctors/manage', 'DoctorsController@manage')->name('admin:clinic_doctors_manage');
+				Route::get('/doctors', 'DoctorsController@index')->name('admin:clinic_doctors');
+		});
+		Route::group([
+			'prefix' => '/settings',
+			'namespace' => 'Settings'
+			], function(){
+				// Patient Guide
+				Route::match(['get', 'post'], '/emailserver/manage', 'EmailServerController@manage')->name('admin:settings_emailserver_manage');
+				Route::get('/emailserver', 'EmailServerController@index')->name('admin:settings_emailserver');
+				// Dpctors
+				Route::match(['get', 'post'], '/generalconfig/manage', 'GeneralConfigController@manage')->name('admin:settings_generalconfig_manage');
+				Route::get('/generalconfig', 'GeneralConfigController@index')->name('admin:settings_generalconfig');
 		});
 });
