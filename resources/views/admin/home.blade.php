@@ -3,7 +3,7 @@
 @section('css')
 @endsection
 @section('content')
-
+{{ $CONFIG }}
 @endsection
 @section('js')
 @endsection
