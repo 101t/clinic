@@ -18,7 +18,7 @@
 						output += '<tr>';
 						output += '<td>'+(i+1)+'</td>';
 						output += '<td>'+val.name+'</td>';
-						output += '<td>'+(val.img ?'<a href="'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
+						output += '<td>'+(val.img ?'<a href="/'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
 						output += '<td>'+val.major+'</td>';
 						output += '<td>'+val.lang+'</td>';
 						output += '<td class="text-center">'+
@@ -62,7 +62,7 @@
 					$("#addeditmodal .modal-title").html(main_trans["editdoctor"]);
 					$("#addeditmodalform input[name=name]").val(value.name);
 					$("#addeditmodalform textarea[name=body]").val(value.body);
-					$("#img_url").html(value.img ? '<a href="'+value.img+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#img_url").html(value.img ? '<a href="/'+value.img+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
 					$("#addeditmodalform input[name=major]").val(value.major);
 					$("#addeditmodalform input[name=lang]").val(value.lang);
 					$("#addeditmodalform input[name=s]").val("edit");

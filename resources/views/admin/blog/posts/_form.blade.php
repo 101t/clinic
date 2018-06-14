@@ -22,6 +22,18 @@
     </div>
 </div>
 
+<div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
+    {!! Form::label('img', 'Image', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::file('img', null, ['class' => 'form-control', 'required']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('img') }}</strong>
+        </span>
+    </div>
+</div>
+
 <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
     {!! Form::label('category_id', 'Category', ['class' => 'col-md-2 control-label']) !!}
 

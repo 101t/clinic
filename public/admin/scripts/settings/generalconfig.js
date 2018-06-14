@@ -65,10 +65,10 @@
 					var value = data;
 					$("#addeditmodal .modal-title").html(main_trans["editemailserver"]);
 					$("#addeditmodalform input[name=name]").val(value.name);
-					$("#logo_url").html(value.logo ? '<a href="'+value.logo+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
-					$("#logo2_url").html(value.logo2 ? '<a href="'+value.logo2+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
-					$("#favicon_url").html(value.favicon ? '<a href="'+value.favicon+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
-					$("#footer_url").html(value.footer ? '<a href="'+value.footer+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#logo_url").html(value.logo ? '<a href="/'+value.logo+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#logo2_url").html(value.logo2 ? '<a href="/'+value.logo2+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#favicon_url").html(value.favicon ? '<a href="/'+value.favicon+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#footer_url").html(value.footer ? '<a href="/'+value.footer+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
 					$("#addeditmodalform textarea[name=short_about]").val(value.short_about);
 					$("#addeditmodalform textarea[name=short_services]").val(value.short_services);
 					$("#addeditmodalform textarea[name=short_blog]").val(value.short_blog);

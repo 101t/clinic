@@ -164,6 +164,7 @@ return [
         App\Providers\GlobalConfigServiceProvider::class,
 
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        //Barryvdh\TranslationManager\ManagerServiceProvider::class,
 
     ],
 

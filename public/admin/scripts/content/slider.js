@@ -18,7 +18,7 @@
 						output += '<tr>';
 						output += '<td>'+(i+1)+'</td>';
 						output += '<td>'+val.name+'</td>';
-						output += '<td>'+(val.img ?'<a href="'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
+						output += '<td>'+(val.img ?'<a href="/'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
 						output += '<td>'+val.lang+'</td>';
 						output += '<td class="text-center">'+
 							'<div class="dropdown">'+

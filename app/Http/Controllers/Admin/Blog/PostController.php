@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
 
@@ -44,10 +45,19 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
+        $img = "";
+        if ($request->hasFile('img')) {
+            $dir = 'uploads/';
+            $extension = strtolower($request->file('img')->getClientOriginalExtension()); // get image extension
+            $fileName = str_random() . '.' . $extension; // rename image
+            $request->file('img')->move($dir, $fileName);
+            $img = $fileName;
+        }
         $post = Post::create([
             'title'       => $request->title,
             'body'        => $request->body,
-            'category_id' => $request->category_id
+            'img'         => $img,
+            'category_id' => $request->category_id,
         ]);
 
         $tagsId = collect($request->tags)->map(function($tag) {
@@ -101,11 +111,28 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
-        $post->update([
+        $img = "";
+        if ($request->hasFile('img')) {
+            $dir = 'uploads/';
+            if ($post->img != '' && File::exists($dir . $post->img))
+                File::delete($dir . $post->img);
+            $extension = strtolower($request->file('img')->getClientOriginalExtension());
+            $fileName = str_random() . '.' . $extension;
+            $request->file('img')->move($dir, $fileName);
+            $post->img = $fileName;
+        } elseif ($request->remove == 1 && File::exists('uploads/' . $post->img)) {
+            File::delete('uploads/' . $post->post_image);
+            $post->img = null;
+        }
+        $post->title = $request->title;
+        $post->body  = $request->body;
+        $post->category_id = $request->category_id;
+        $post->save();
+        /*$post->update([
             'title'       => $request->title,
             'body'        => $request->body,
             'category_id' => $request->category_id
-        ]);
+        ]);*/
 
         $tagsId = collect($request->tags)->map(function($tag) {
             return Tag::firstOrCreate(['name' => $tag])->id;

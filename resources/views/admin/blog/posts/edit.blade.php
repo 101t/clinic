@@ -10,6 +10,10 @@
                     <li class="m-nav__item m-nav__item--home"><a href="{{ route('admin:home') }}" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a></li>
                     <li class="m-nav__separator">-</li>
                     <li class="m-nav__item">
+                        <a href="{{ url('admin/blog/posts') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Posts") }}</span></a>
+                    </li>
+                    <li class="m-nav__separator">-</li>
+                    <li class="m-nav__item">
                         <a href="{{ url('admin/blog/posts/'.$post->id.'/edit') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Edit Post") }}</span></a>
                     </li>
                 </ul>
@@ -45,7 +49,7 @@
         <div class="m-portlet m-portlet--mobile">
             <div class="m-portlet__body">
                 <div class="row">@include('flash::message')</div>
-                {!! Form::model($post, ['method' => 'PUT', 'url' => "/admin/blog/posts/{$post->id}", 'class' => 'm-form', 'role' => 'form']) !!}
+                {!! Form::model($post, ['method' => 'PUT', 'url' => "/admin/blog/posts/{$post->id}", 'class' => 'm-form', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}
                     @include('admin.blog.posts._form')
                     <div class="form-group">
                         <div class="col-md-8 col-md-offset-2">

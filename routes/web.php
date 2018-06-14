@@ -10,6 +10,23 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('storage/uploads/{filename}', function ($filename)
+{
+    $path = storage_path('uploads/'.$filename);
+    //dd($path);
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
 Route::group([
 	"prefix" => LaravelLocalization::setLocale(), 
 	'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
@@ -21,13 +38,15 @@ Route::group([
 		Route::get('/contacts', 'ContactsController@index')->name("web.contacts");
 		Route::get('/faq', 'FaqController@index')->name("web.faq");
 		Route::get('/videos', 'VideosController@index')->name("web.videos");
+
+		Route::get('/hair-transplantation/{slug}', 'HairTransController@detail')->name('web:hairtrans_detail');
+		Route::get('/hair-transplantation', 'HairTransController@index')->name('web:hairtrans');
 		
 });
 
 Route::group([
 	'prefix' => '/admin',
 	'namespace' => 'Admin',
-	//'middleware' => 'auth',
 	], function(){
 		Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 		Route::post('/login', 'Auth\LoginController@login');
@@ -42,7 +61,13 @@ Route::group([
 		Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 		Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 		Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+});
 
+Route::group([
+	'prefix' => '/admin',
+	'namespace' => 'Admin',
+	'middleware' => 'auth',
+	], function(){
 		Route::get('/home', 'HomeController@index')->name('admin:home');
 		// Content
 		Route::group([

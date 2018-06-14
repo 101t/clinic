@@ -1,0 +1,10 @@
+<?php
+
+return array (
+  'About' => 'من نحن',
+  'Active' => 'نشط',
+  'Add Faq' => 'اضافة سؤال',
+  'Body' => 'محتوى نص',
+  'Clinic' => 'عيادة',
+  'Close' => 'إغلاق',
+);

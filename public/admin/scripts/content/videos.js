@@ -18,7 +18,7 @@
 						output += '<tr>';
 						output += '<td>'+(i+1)+'</td>';
 						output += '<td>'+val.name+'</td>';
-						output += '<td><a href="'+val.url+'" target="_blank">'+val.url+'</a></td>';
+						output += '<td><a href="/'+val.url+'" target="_blank">'+val.url+'</a></td>';
 						output += '<td>'+(val.img ?'<a href="'+val.img+'" target="_blank">'+val.img+'</a>':main_trans["noimage"])+'</td>';
 						output += '<td>'+val.lang+'</td>';
 						output += '<td class="text-center">'+
@@ -63,7 +63,7 @@
 					$("#addeditmodalform input[name=name]").val(value.name);
 					$("#addeditmodalform textarea[name=body]").val(value.body);
 					$("#addeditmodalform input[name=url]").val(value.url);
-					$("#img_url").html(value.img ? '<a href="'+value.img+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
+					$("#img_url").html(value.img ? '<a href="/'+value.img+'" target="_blank">'+main_trans["preview"]+'</a>': main_trans["noimage"]);
 					$("#video_preview").html('<a href="'+value.url+'" target="_blank">'+main_trans["preview"]+'</a>');
 					$("#addeditmodalform select[name=lang]").val(value.lang);
 					$("#addeditmodalform input[name=s]").val("edit");

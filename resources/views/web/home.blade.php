@@ -7,6 +7,21 @@
 <div class="s-swiper js__swiper-slider">
     <!-- Swiper Wrapper -->
     <div class="swiper-wrapper">
+        @forelse ($homesliders as $homeslider)
+        <div class="s-promo-block-v4 g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('{{ $homeslider->img }}');">
+            <div class="container g-ver-center--xs">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="g-margin-b-50--xs">
+                            <h1 class="g-font-size-32--xs g-font-size-45--sm g-font-size-60--md g-color--white">{{ $homeslider->title }}</h1>
+                            <p class="g-font-size-18--xs g-font-size-22--sm g-color--white-opacity">{{ $homeslider->body }}</p>
+                        </div>
+                        <a href="javascript:void(0)" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 g-padding-x-50--xs">{{ trans('Read More') }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @empty
         <div class="s-promo-block-v4 g-fullheight--xs g-bg-position--center swiper-slide" style="background: url('{{ asset('assets/img/bg/14.jpg')  }}');">
             <div class="container g-ver-center--xs">
                 <div class="row">
@@ -33,6 +48,7 @@
                 </div>
             </div>
         </div>
+        @endforelse
     </div>
     <!-- End Swiper Wrapper -->
 

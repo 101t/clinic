@@ -10,6 +10,10 @@
                     <li class="m-nav__item m-nav__item--home"><a href="{{ route('admin:home') }}" class="m-nav__link m-nav__link--icon"><i class="m-nav__link-icon la la-home"></i></a></li>
                     <li class="m-nav__separator">-</li>
                     <li class="m-nav__item">
+                        <a href="{{ url('admin/blog/tags') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Tags") }}</span></a>
+                    </li>
+                    <li class="m-nav__separator">-</li>
+                    <li class="m-nav__item">
                         <a href="{{ url('admin/blog/tags/create') }}" class="m-nav__link"><span class="m-nav__link-text">{{ __("Create Tag") }}</span></a>
                     </li>
                 </ul>

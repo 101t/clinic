@@ -16,6 +16,7 @@ class Faq extends Migration
         Schema::create('faq_faq', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255);
+            $table->string('slug', 255);
             $table->text('body')->nullable();
             $table->string('icon', 255);
             $table->string('lang', 2);

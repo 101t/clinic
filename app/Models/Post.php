@@ -7,12 +7,15 @@ use App\Models\Tag;
 use App\Models\Comment;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
+    use Sluggable;
     protected $fillable = [
         'title',
         'body',
+        'img',
         'user_id',
         'category_id',
         'is_published'
@@ -67,5 +70,18 @@ class Post extends Model
     public function getPublishedAttribute()
     {
         return ($this->is_published) ? 'Yes' : 'No';
+    }
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

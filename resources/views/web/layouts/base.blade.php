@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="{{ app()->getLocale() }}">
 <head>
 	<meta charset="UTF-8">
 	@include('web.layouts.meta')

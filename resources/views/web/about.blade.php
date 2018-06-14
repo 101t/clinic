@@ -8,7 +8,7 @@
 <div class="g-bg-position--center js__parallax-window" style="background: url({{ asset('assets/img/bg/10.jpg') }}) 50% 0 no-repeat fixed;">
     <div class="g-container--md g-text-center--xs g-padding-y-150--xs">
         <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Dr. Salim Balin Clinik</p>
-        <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">About</h1>
+        <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white g-letter-spacing--1">{{ __('About') }}</h1>
     </div>
 </div>
 <!--========== END PROMO BLOCK ==========-->
@@ -17,7 +17,7 @@
     <div class="container g-padding-y-80--xs g-padding-y-125--sm">
         <div class="row">
             <div class="col-md-4 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">About</p>
+                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">{{ __('About') }}</p>
                 <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
                     <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md">Dr.</h2>
                 </div>
