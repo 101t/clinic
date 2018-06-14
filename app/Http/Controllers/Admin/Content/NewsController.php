@@ -36,7 +36,6 @@ class NewsController extends Controller{
 						$file->move(storage_path().'/uploads/', $name);
 						$obj->img = 'storage/uploads/'.$name;
 					}
-					$obj->url 	= $parameters["url"];
 					$obj->lang 	= $parameters["lang"];
 					$obj->save();
 					$args = ["message" => "OK, You have added slide successfully"];
@@ -55,7 +54,6 @@ class NewsController extends Controller{
 							'name' => $parameters["name"],
 							'body' => $parameters["body"],
 							'img' => $img,
-							'url' => $parameters["url"],
 							'lang' => $parameters["lang"],
 						]);
 					$args = ["message" => "OK, You have edit slide successfully"];

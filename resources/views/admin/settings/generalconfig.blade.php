@@ -91,18 +91,18 @@
 				<div class="modal-body">
 					<div class="form-group">
 						<label>{{ __('Name') }}</label>
-						<input type="text" class="form-control" name="name" value="" maxlength="255" placeholder="{{ __('Name') }}" required>
+						<input type="text" class="form-control" name="name" value="Op. Dr. Salim Balin Clinic" maxlength="255" placeholder="{{ __('Name') }}">
 					</div>
 					<div class="form-group row">
 						<div class="col-md-6">
 							<label>{{ __('Logo') }}</label><br>
-							<input type="file" name="logo" required>
+							<input type="file" name="logo">
 							<small class="form-text text-muted">{{ __("Logo size must be 210x56 pixel and *.png format") }}</small>
 							<span class="muted-text" id="logo_url"></span>
 						</div>
 						<div class="col-md-6">
 							<label>{{ __('Colored Logo') }}</label><br>
-							<input type="file" name="logo2" required>
+							<input type="file" name="logo2">
 							<small class="form-text text-muted">{{ __("Colored Logo size must be 210x56 pixel and *.png format") }}</small>
 							<span class="muted-text" id="logo2_url"></span>
 						</div>
@@ -123,19 +123,20 @@
 					</div>
 					<div class="form-group">
 						<label>{{ __('Short About') }}</label>
-						<textarea class="form-control" name="short_about" rows="5" placeholder="{{ __('Short About') }}"></textarea>
+						<textarea class="form-control" name="short_about" rows="5" placeholder="{{ __('Short About') }}">We are a creative studio focusing on culture, luxury, editorial & art. Somewhere between sophistication and simplicity.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Short Services') }}</label>
-						<textarea class="form-control" name="short_services" rows="5" placeholder="{{ __('Short Services') }}"></textarea>
+						<textarea class="form-control" name="short_services" rows="5" placeholder="{{ __('Short Services') }}">With more than 40 years of experience in healthcare consulting, we deliver results to help grow your practice. Our comprehensive medical billing services allow you to do what you do best—run your practice.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Short Blog') }}</label>
-						<textarea class="form-control" name="short_blog" rows="5" placeholder="{{ __('Short Blog') }}"></textarea>
+						<textarea class="form-control" name="short_blog" rows="5" placeholder="{{ __('Short Blog') }}">We Create Beautiful Experiences
+That Drive Successful Businesses.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Short FAQ') }}</label>
-						<textarea class="form-control" name="short_faq" rows="5" placeholder="{{ __('Short FAQ') }}"></textarea>
+						<textarea class="form-control" name="short_faq" rows="5" placeholder="{{ __('Short FAQ') }}">The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels. Whether through commerce or just an experience to tell your brand's story, the time has come to start using development languages that fit your projects needs.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Meta description') }}</label>
@@ -151,38 +152,38 @@
 					</div>
 					<div class="form-group">
 						<label>{{ __('About') }}</label>
-						<textarea class="form-control" name="about" rows="5" placeholder="{{ __('About') }}"></textarea>
+						<textarea class="form-control" name="about" rows="5" placeholder="{{ __('About') }}">We aim high at being focused on building relationships with our clients and community. Using our creative gifts drives this foundation. The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels. Now that your brand is all dressed up and ready to party, it's time to release it to the world. By the way, let's celebrate already.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Address') }}</label>
-						<textarea class="form-control" name="address" rows="5" placeholder="{{ __('Address') }}"></textarea>
+						<textarea class="form-control" name="address" rows="5" placeholder="{{ __('Address') }}">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
 							<label>{{ __('Phone 1') }}</label>
-							<input type="text" class="form-control" name="phone1" value="" maxlength="25" placeholder="{{ __('Phone 1') }}">
+							<input type="text" class="form-control" name="phone1" value="+90 (216) 705 4322" maxlength="25" placeholder="{{ __('Phone 1') }}">
 						</div>
 						<div class="col-md-4">
 							<label>{{ __('Phone 2') }}</label>
-							<input type="text" class="form-control" name="phone2" value="" maxlength="25" placeholder="{{ __('Phone 2') }}">
+							<input type="text" class="form-control" name="phone2" value="+90 (216) 705 4324" maxlength="25" placeholder="{{ __('Phone 2') }}">
 						</div>
 						<div class="col-md-4">
 							<label>{{ __('Mobile') }}</label>
-							<input type="text" class="form-control" name="mobile" value="" maxlength="25" placeholder="{{ __('Mobile') }}">
+							<input type="text" class="form-control" name="mobile" value="+90 (531) 343 7456" maxlength="25" placeholder="{{ __('Mobile') }}">
 						</div>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-4">
 							<label>{{ __('Fax') }}</label>
-							<input type="text" class="form-control" name="fax" value="" maxlength="25" placeholder="{{ __('Fax') }}">
+							<input type="text" class="form-control" name="fax" value="+90 (216) 705 2223" maxlength="25" placeholder="{{ __('Fax') }}">
 						</div>
 						<div class="col-md-4">
 							<label>{{ __('Website') }}</label>
-							<input type="text" class="form-control" name="website" value="" maxlength="100" placeholder="{{ __('Website') }}">
+							<input type="text" class="form-control" name="website" value="http://drsalimbalinclinic.com" maxlength="100" placeholder="{{ __('Website') }}">
 						</div>
 						<div class="col-md-4">
 							<label>{{ __('Email') }}</label>
-							<input type="text" class="form-control" name="email" value="" maxlength="100" placeholder="{{ __('Email') }}">
+							<input type="text" class="form-control" name="email" value="info@drsalimbalinclinic.com" maxlength="100" placeholder="{{ __('Email') }}">
 						</div>
 					</div>
 					<div class="form-group">
@@ -254,11 +255,11 @@
 					</div>
 					<div class="form-group">
 						<label>{{ __('User Terms') }}</label>
-						<textarea class="form-control" name="useterms" rows="5" placeholder="{{ __('User Terms') }}"></textarea>
+						<textarea class="form-control" name="useterms" rows="5" placeholder="{{ __('User Terms') }}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Privacy Policy') }}</label>
-						<textarea class="form-control" name="privacypolicy" rows="5" placeholder="{{ __('Privacy Policy') }}"></textarea>
+						<textarea class="form-control" name="privacypolicy" rows="5" placeholder="{{ __('Privacy Policy') }}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
 					</div>
 					<div class="form-group row">
 						<div class="col-md-6">
@@ -272,7 +273,7 @@
 					</div>
 					<div class="form-group">
 						<label>{{ __('Copyright') }}</label>
-						<textarea class="form-control" name="copyright" rows="5" placeholder="{{ __('Copyright') }}"></textarea>
+						<textarea class="form-control" name="copyright" rows="5" placeholder="{{ __('Copyright') }}"><a href="http://drsalimbalinclinic.com/">Op. Dr. Salim Balin</a> All right reserved</textarea>
 					</div>
 					<div class="form-group">
 						<label>{{ __('Language') }}</label>

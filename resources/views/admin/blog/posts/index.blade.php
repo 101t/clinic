@@ -94,7 +94,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="5">{{ __("No post available.") }}</td>
+                                <td colspan="7" class="text-center">{{ __("No post available.") }}</td>
                             </tr>
                         @endforelse
                     </tbody>

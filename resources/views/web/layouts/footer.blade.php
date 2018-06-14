@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-2 g-margin-b-20--xs g-margin-b-0--md">
                     <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
-                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="/">Home</a></li>
+                        <li><a class="g-font-size-15--xs g-color--white-opacity" href="/">{{ __("Home") }}</a></li>
                         <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">About</a></li>
                         <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">FAQ</a></li>
                         <li><a class="g-font-size-15--xs g-color--white-opacity" href="javascript:void(0)">Videos</a></li>
@@ -29,8 +29,8 @@
                     </ul>
                 </div>
                 <div class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 s-footer__logo g-padding-y-50--xs g-padding-y-0--md">
-                    <h3 class="g-font-size-18--xs g-color--white">Dr. Salim Balin Clinic</h3>
-                    <p class="g-color--white-opacity">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
+                    <h3 class="g-font-size-18--xs g-color--white">{{ $CONFIG->name }}</h3>
+                    <p class="g-color--white-opacity">{{ $CONFIG->short_about }}</p>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                 </a>
             </div>
             <div class="col-xs-6 g-text-right--xs">
-                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"><a href="http://drsalimbalin.com/">Op. Dr. Salim Balin</a> All right reserved</p>
+                <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light">{!! $CONFIG->copyright ? $CONFIG->copyright : '<a href="http://drsalimbalinclinic.com/">Op. Dr. Salim Balin</a> All right reserved' !!}</p>
             </div>
         </div>
     </div>

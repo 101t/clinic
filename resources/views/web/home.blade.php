@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="g-margin-b-50--xs">
-                            <h1 class="g-font-size-32--xs g-font-size-45--sm g-font-size-60--md g-color--white">{{ $homeslider->title }}</h1>
+                            <h1 class="g-font-size-32--xs g-font-size-45--sm g-font-size-60--md g-color--white">{{ $homeslider->name }}</h1>
                             <p class="g-font-size-18--xs g-font-size-22--sm g-color--white-opacity">{{ $homeslider->body }}</p>
                         </div>
                         <a href="javascript:void(0)" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 g-padding-x-50--xs">{{ trans('Read More') }}</a>
@@ -82,9 +82,9 @@
         </div>
         <div class="col-md-5 g-margin-b-10--xs g-margin-b-0--lg g-margin-t-10--lg g-margin-l-20--lg">
             <div class="g-margin-b-30--xs">
-                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-15--xs">Services</p>
+                <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-15--xs">{{ __("Services") }}</p>
                 <h2 class="g-font-size-32--xs g-font-size-36--sm">We Specialize In</h2>
-                <p>With more than 40 years of experience in healthcare consulting, we deliver results to help grow your practice. Our comprehensive medical billing services allow you to do what you do best—run your practice.</p>
+                <p>{{ $CONFIG->short_service }}</p>
             </div>
             <div class="row">
                 <ul class="list-unstyled col-xs-4 g-full-width--xs g-ul-li-tb-5--xs g-margin-b-20--xs g-margin-b-0--sm">
@@ -115,7 +115,7 @@
 <div class="g-bg-color--primary-ltr">
     <div class="container g-padding-y-80--xs g-padding-y-125--sm">
         <div class="g-text-center--xs g-margin-b-100--xs">
-            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Process</p>
+            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">{{ __("Process") }}</p>
             <h2 class="g-font-size-32--xs g-font-size-36--sm g-color--white">How it Works</h2>
         </div>
         <ul class="list-inline row g-margin-b-100--xs">
@@ -609,9 +609,9 @@
 <div class="s-promo-block-v5 g-bg-position--center js__parallax-window" style="background: url({{ asset('assets/img/bg/13.jpg') }}) 50% 0 no-repeat fixed;">
     <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
         <div class="g-margin-b-80--xs">
-            <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white">The Fastest Way To Recover</h2>
+            <h2 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white">{{ __("The Fastest Way To Recover") }}</h2>
         </div>
-        <a href="http://drsalimbalin.com/" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50">Learn More</a>
+        <a href="http://drsalimbalin.com/" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50">{{ __("Learn More") }}</a>
     </div>
 </div>
 <!-- End Parallax -->
@@ -619,77 +619,25 @@
 <!-- News -->
 <div class="container-fluid g-padding-y-80--xs g-padding-y-125--sm">
     <div class="g-text-center--xs g-margin-b-80--xs">
-        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Therapy News</p>
-        <p>A clinic is a healthcare facility that<br>is primarily focused on the care of outpatients.</p>
+        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">{{ __("Therapy News") }}</p>
+        <p>{{ $CONFIG->short_news }}</p>
     </div>
 
     <!-- Swiper -->
     <div class="s-swiper js__swiper-news">
         <!-- Wrapper -->
         <div class="swiper-wrapper g-margin-b-60--xs">
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/07.jpg');">
+            @foreach (\App\Models\News::all()->take(10) as $news)
+            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('{{ $news->img ? '/'.$news->img : asset('assets/img/400x500/07.jpg') }}');">
                 <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
                     <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
+                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">{{ $news->name }}</h3>
+                        <p class="g-color--white">{{ str_limit($news->body, 50) }}</p>
                     </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
+                    <a href="{{ route("web:news_detail", [$news->slug]) }}" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">{{ __("Read More") }}</a>
                 </div>
             </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/08.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/09.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/10.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/11.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/12.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
-            <article class="s-promo-block-v6 g-bg-position--center swiper-slide" style="background: url('assets/img/400x500/13.jpg');">
-                <div class="g-text-center--xs g-padding-x-15--xs g-padding-x-30--lg g-padding-y-50--xs g-margin-t-120--xs">
-                    <div class="g-margin-b-25--xs">
-                        <h3 class="g-font-size-16--xs g-color--white g-margin-b-5--xs">Medical Services</h3>
-                        <p class="g-color--white">Clinics can be privately operated.</p>
-                    </div>
-                    <a href="http://drselimbalimclinic.com/" class="text-uppercase s-btn s-btn--xs s-btn--white-brd g-radius--50">Read More</a>
-                </div>
-            </article>
+            @endforeach
         </div>
         <!-- End Wrapper -->
 
@@ -707,32 +655,29 @@
             <!-- Form -->
             <div class="col-md-8 js__form-eqaul-height-v1">
                 <div class="g-padding-x-40--xs g-padding-y-50--xs">
-                    <h2 class="g-font-size-24--xs g-color--primary g-margin-b-50--xs">Make an Appointment</h2>
+                    <h2 class="g-font-size-24--xs g-color--primary g-margin-b-50--xs">{{ __("Make an Appointment") }}</h2>
                     <form>
                         <div class="row g-margin-b-30--xs g-margin-b-50--md">
                             <div class="col-sm-6 g-margin-b-30--xs g-margin-b-0--md">
-                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="* Full Name">
+                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="{{ __("* Full Name") }}">
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="* Phone Number">
+                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="{{ __("* Phone Number") }}">
                             </div>
                         </div>
                         <div class="row g-margin-b-50--xs g-margin-b-50--md">
-                            <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
-                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="* Department">
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="{{ __("Email Address") }}">
                             </div>
-                            <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
-                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="* Doctor">
-                            </div>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="* DD/MM/YY">
+                            <div class="col-sm-6 g-margin-b-30--xs g-margin-b-0--md">
+                                <input type="text" class="form-control s-form-v4__input g-padding-l-0--xs" placeholder="{{ __("* Write your title here") }}">
                             </div>
                         </div>
                         <div class="g-margin-b-50--xs">
-                            <textarea class="form-control s-form-v4__input g-padding-l-0--xs" rows="5" placeholder="* What ails you?"></textarea>
+                            <textarea class="form-control s-form-v4__input g-padding-l-0--xs" rows="5" placeholder="{{ __('* What ails you?' )}}"></textarea>
                         </div>
                         <div class="g-text-center--xs">
-                            <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Send</button>
+                            <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--primary-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">{{ __("Send") }}</button>
                         </div>
                     </form>
                 </div>
@@ -742,37 +687,39 @@
             <!-- Contacts -->
             <div class="col-md-4 g-bg-color--primary-ltr js__form-eqaul-height-v1">
                 <div class="g-overflow--hidden g-padding-x-40--xs g-padding-y-50--xs">
-                    <h2 class="g-font-size-24--xs g-color--white g-margin-b-50--xs">Contact Us</h2>
+                    <h2 class="g-font-size-24--xs g-color--white g-margin-b-50--xs">{{ __("Contact Us") }}</h2>
                     <ul class="list-unstyled g-margin-b-70--xs">
+                        @if ($CONFIG->address)
                         <li class="clearfix g-color--white g-margin-b-40--xs">
                             <div class="g-media g-width-40--xs g-margin-t-5--xs">
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-location-pin"></i>
                             </div>
-                            <div class="g-media__body">
-                                2776 Şişli Akmerkez, Deniz Cad. <br> 34 İstanbul, Türkiye
-                            </div>
+                            <div class="g-media__body">{{ $CONFIG->address }}</div>
                         </li>
+                        @endif
                         <li class="clearfix g-color--white g-margin-b-40--xs">
                             <div class="g-media g-width-40--xs g-margin-t-5--xs">
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-headphone-alt"></i>
                             </div>
-                            <div class="g-media__body">
-                                + (90) 341 389 3720
-                            </div>
+                            <div class="g-media__body">{{ $CONFIG->phone1 }}</div>
                         </li>
                         <li class="clearfix g-color--white g-margin-b-40--xs">
                             <div class="g-media g-width-40--xs g-margin-t-5--xs">
                                 <i class="g-font-size-20--xs g-color--white-opacity-light ti-email"></i>
                             </div>
-                            <div class="g-media__body">
-                                info@drsalimbalin.com
-                            </div>
+                            <div class="g-media__body">{{ $CONFIG->email }}</div>
                         </li>
                     </ul>
                     <ul class="list-inline g-ul-li-lr-15--xs">
-                        <li><a href="#"><i class="g-font-size-20--xs g-color--white-opacity ti-facebook"></i></a></li>
-                        <li><a href="#"><i class="g-font-size-20--xs g-color--white-opacity ti-twitter"></i></a></li>
-                        <li><a href="#"><i class="g-font-size-20--xs g-color--white-opacity ti-instagram"></i></a></li>
+                        @if ($CONFIG->facebook)
+                        <li><a href="{{ $CONFIG->facebook }}"><i class="g-font-size-20--xs g-color--white-opacity ti-facebook"></i></a></li>
+                        @endif
+                        @if ($CONFIG->twitter)
+                        <li><a href="{{ $CONFIG->twitter }}"><i class="g-font-size-20--xs g-color--white-opacity ti-twitter"></i></a></li>
+                        @endif
+                        @if ($CONFIG->instagram)
+                        <li><a href="{{ $CONFIG->instagram }}"><i class="g-font-size-20--xs g-color--white-opacity ti-instagram"></i></a></li>
+                        @endif
                     </ul>
                     <i class="g-font-size-150--xs g-color--white-opacity-lightest ti-comments" style="position: absolute; bottom: -1.25rem; right: -1.25rem;"></i>
                 </div>

@@ -63,7 +63,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="2">{{ __('No tag available.') }}</td>
+                                <td colspan="2" class="text-center">{{ __('No tag available.') }}</td>
                             </tr>
                         @endforelse
                     </tbody>

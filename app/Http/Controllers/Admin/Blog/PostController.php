@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -47,11 +48,11 @@ class PostController extends Controller
     {
         $img = "";
         if ($request->hasFile('img')) {
-            $dir = 'uploads/';
+            $dir = storage_path().'/uploads/';
             $extension = strtolower($request->file('img')->getClientOriginalExtension()); // get image extension
-            $fileName = str_random() . '.' . $extension; // rename image
+            $fileName = Str::uuid().'.'.$extension; // rename image
             $request->file('img')->move($dir, $fileName);
-            $img = $fileName;
+            $img = 'storage/uploads/'.$fileName;
         }
         $post = Post::create([
             'title'       => $request->title,
@@ -113,13 +114,13 @@ class PostController extends Controller
     {
         $img = "";
         if ($request->hasFile('img')) {
-            $dir = 'uploads/';
+            $dir = storage_path().'/uploads/';
             if ($post->img != '' && File::exists($dir . $post->img))
                 File::delete($dir . $post->img);
             $extension = strtolower($request->file('img')->getClientOriginalExtension());
-            $fileName = str_random() . '.' . $extension;
+            $fileName = Str::uuid().'.'.$extension;
             $request->file('img')->move($dir, $fileName);
-            $post->img = $fileName;
+            $post->img = 'storage/uploads/'.$fileName;
         } elseif ($request->remove == 1 && File::exists('uploads/' . $post->img)) {
             File::delete('uploads/' . $post->post_image);
             $post->img = null;

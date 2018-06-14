@@ -34,6 +34,7 @@ Route::group([
 		//Route::get('/', function () {return view('welcome');});
 		Route::get('/', 'HomeController@index')->name("web.home");
 		Route::get('/about', 'AboutController@index')->name("web.about");
+		Route::get('/blog/{slug}', 'BlogController@detail')->name("web.blog_detail");
 		Route::get('/blog', 'BlogController@index')->name("web.blog");
 		Route::get('/contacts', 'ContactsController@index')->name("web.contacts");
 		Route::get('/faq', 'FaqController@index')->name("web.faq");
@@ -41,6 +42,11 @@ Route::group([
 
 		Route::get('/hair-transplantation/{slug}', 'HairTransController@detail')->name('web:hairtrans_detail');
 		Route::get('/hair-transplantation', 'HairTransController@index')->name('web:hairtrans');
+		Route::get('/patient-guide/{slug}', 'PatientGuideController@detail')->name('web:patientguide_detail');
+		Route::get('/patient-guide', 'PatientGuideController@index')->name('web:patientguide');
+		// News
+		Route::get('/news/{slug}', 'NewsController@detail')->name('web:news_detail');
+		Route::get('/news', 'NewsController@index')->name('web:news');
 		
 });
 

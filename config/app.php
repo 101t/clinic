@@ -164,7 +164,8 @@ return [
         App\Providers\GlobalConfigServiceProvider::class,
 
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-        //Barryvdh\TranslationManager\ManagerServiceProvider::class,
+        Barryvdh\TranslationManager\ManagerServiceProvider::class,
+        Merujan99\LaravelVideoEmbed\Providers\LaravelVideoEmbedServiceProvider::class,
 
     ],
 
@@ -218,6 +219,7 @@ return [
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'LaravelVideoEmbed' => Merujan99\LaravelVideoEmbed\Facades\LaravelVideoEmbed::class,
 
     ],
 

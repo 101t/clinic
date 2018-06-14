@@ -2,7 +2,7 @@
     <div class="clinik-topmenu">
         <div class="wrapper">
             <div class="mnu-left">
-                <p>Appointment Number <strong>+(90) 423 234 2343</strong></p>
+                <p>{!! trans("Appointment Number <strong>$CONFIG->phone1</strong>") !!}</p>
             </div>
             <div class="mnu-right">
                 <ul>
@@ -37,8 +37,8 @@
                     <!-- Logo -->
                     <div class="s-header-v2__logo">
                         <a href="{{ route('web.home') }}" class="s-header-v2__logo-link">
-                            <img class="s-header-v2__logo-img s-header-v2__logo-img--default" src="{{ asset('assets/img/logo-white.png') }}" alt="Logo">
-                            <img class="s-header-v2__logo-img s-header-v2__logo-img--shrink" src="{{ asset('assets/img/logo.png') }}" alt="Logo">
+                            <img class="s-header-v2__logo-img s-header-v2__logo-img--default" src="{{ $CONFIG->logo ? '/'.$CONFIG->logo : asset('assets/img/logo-white.png') }}" alt="Logo">
+                            <img class="s-header-v2__logo-img s-header-v2__logo-img--shrink" src="{{ $CONFIG->logo2 ? '/'.$CONFIG->logo2 : asset('assets/img/logo.png') }}" alt="Logo">
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -53,26 +53,18 @@
                                 <a href="javascript:void(0);" class="dropdown-toggle s-header-v2__nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ __('Hair Transplantation') }} <span class="g-font-size-10--xs g-margin-l-5--xs ti-angle-down"></span></a>
                                 <ul class="dropdown-menu s-header-v2__dropdown-menu">
                                     @forelse (\App\Models\HairTrans::all()->take(10) as $hairtrans)
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">{{ $hairtrans->name }}</a></li>
+                                    <li><a href="{{ route('web:hairtrans_detail', [$hairtrans->slug]) }}" class="s-header-v2__dropdown-menu-link">{{ $hairtrans->name }}</a></li>
                                     @empty
                                     @endforelse
-                                    <!--<li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Hair Transplantation</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Sapphire FUE Hair Transplant</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">DHI Hair Transplant</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Beard Transplantation</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Eyebrow Transplantation</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Hair Mesotherapy</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">PRP Hair Treatment</a></li>-->
-                                    
                                 </ul>
                             </li>
                             <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
                                 <a href="javascript:void(0);" class="dropdown-toggle s-header-v2__nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ __('Patient Guide') }} <span class="g-font-size-10--xs g-margin-l-5--xs ti-angle-down"></span></a>
                                 <ul class="dropdown-menu s-header-v2__dropdown-menu">
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Before Hair Transplant Operation</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">After Hair Transplantation</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Post Operative Hair Wash</a></li>
-                                    <li><a href="javascript:void(0)" class="s-header-v2__dropdown-menu-link">Hair Transplant in Turkey</a></li>
+                                    @forelse (\App\Models\PatientGuide::all()->take(10) as $patientguide)
+                                    <li><a href="{{ route('web:patientguide_detail', [$patientguide->slug]) }}" class="s-header-v2__dropdown-menu-link">{{ $patientguide->name }}</a></li>
+                                    @empty
+                                    @endforelse
                                 </ul>
                             </li>
                             <li class="s-header-v2__nav-item"><a href="{{ route('web.faq') }}" class="s-header-v2__nav-link">{{ __('FAQ') }}</a></li>

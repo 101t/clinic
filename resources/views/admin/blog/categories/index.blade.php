@@ -75,7 +75,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="2">{{ __("No category available.") }}</td>
+                                <td colspan="3" class="text-center">{{ __("No category available.") }}</td>
                             </tr>
                         @endforelse
                         </tbody>

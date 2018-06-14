@@ -9,29 +9,29 @@
 <div class="g-position--relative g-bg-color--primary">
     <div class="g-container--md g-padding-y-125--xs">
         <div class="g-text-center--xs g-margin-t-50--xs g-margin-b-80--xs">
-            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Contact Us</p>
-            <h2 class="g-font-size-32--xs g-font-size-36--sm g-color--white">Get in Touch</h2>
+            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">{{ trans('Contact Us') }}</p>
+            <h2 class="g-font-size-32--xs g-font-size-36--sm g-color--white">{{ trans('Get in Touch') }}</h2>
         </div>
         <div class="row g-row-col--5 g-margin-b-80--xs">
             <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
                 <div class="g-text-center--xs">
                     <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-email"></i>
-                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Email</h4>
-                    <p class="g-color--white-opacity">info@drsalimbalin.com</p>
+                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">{{ trans('Email') }}</h4>
+                    <p class="g-color--white-opacity">{{ $CONFIG->email }}</p>
                 </div>
             </div>
             <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
                 <div class="g-text-center--xs">
                     <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-map-alt"></i>
-                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Address</h4>
-                    <p class="g-color--white-opacity">277 Bedford Avenue, Brooklyn</p>
+                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">{{ trans('Address') }}</h4>
+                    <p class="g-color--white-opacity">{{ $CONFIG->address }}</p>
                 </div>
             </div>
             <div class="col-xs-4 g-full-width--xs">
                 <div class="g-text-center--xs">
                     <i class="g-display-block--xs g-font-size-40--xs g-color--white-opacity g-margin-b-30--xs ti-headphone-alt"></i>
-                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Call at</h4>
-                    <p class="g-color--white-opacity">+ (90) 431 389 3720</p>
+                    <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">{{ trans("Call at") }}</h4>
+                    <p class="g-color--white-opacity">{{ $CONFIG->phone1 }}</p>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                 <textarea class="form-control s-form-v3__input" rows="5" placeholder="* Your message"></textarea>
             </div>
             <div class="g-text-center--xs">
-                <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">Send</button>
+                <button type="submit" class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs">{{ trans('Send') }}</button>
             </div>
         </form>
     </div>
