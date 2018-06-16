@@ -6,7 +6,7 @@
                 <div class="m-stack m-stack--ver m-stack--general">
                     <div class="m-stack__item m-stack__item--middle m-brand__logo">
                         <a href="{{ route('admin:home') }}" class="m-brand__logo-wrapper">
-                            <img alt="" src="{{ asset('assets/img/logo-white.png') }}" style="width:100%;" />
+                            <img alt="" src="{{ $CONFIG ? '/'.$CONFIG->logo : asset('assets/img/logo-white.png') }}" style="width:100%;" />
                         </a>
                     </div>
                     <div class="m-stack__item m-stack__item--middle m-brand__tools">

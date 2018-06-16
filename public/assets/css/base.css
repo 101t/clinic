@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,500,600,700&subset=latin,latin-ext);
 @import "../libs/bootstrap/css/bootstrap.min.css";
-@import "../libs/fa/css/fontawesome-all.min.css";
+@import "../libs/fa/css/font-awesome.min.css";
 @import "../libs/themify/themify.css";
 @import "../libs/scrollbar/scrollbar.min.css";
 @import "../libs/swiper/swiper.min.css";

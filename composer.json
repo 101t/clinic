@@ -14,7 +14,8 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.6",
         "mcamara/laravel-localization": "^1.3",
-        "merujan99/laravel-video-embed": "dev-master"
+        "merujan99/laravel-video-embed": "dev-master",
+        "phpmailer/phpmailer": "^6.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

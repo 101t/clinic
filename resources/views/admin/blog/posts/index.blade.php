@@ -80,9 +80,9 @@
                                     @if (Auth::user()->is_admin)
                                         @php
                                             if($post->published == 'Yes') {
-                                                $label = 'Draft';
+                                                $label = __('Draft');
                                             } else {
-                                                $label = 'Publish';
+                                                $label = __('Publish');
                                             }
                                         @endphp
                                         <a href="{{ url("/admin/blog/posts/{$post->id}/publish") }}" data-method="PUT" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-warning">{{ $label }}</a>

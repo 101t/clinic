@@ -31,12 +31,12 @@ class UserController extends Controller
         if(auth()->user() == $user) {
             flash()->overlay("You can't delete yourself.");
 
-            return redirect('/admin/users');
+            return redirect('/admin/auth/users');
         }
 
         $user->delete();
         flash()->overlay('User deleted successfully.');
 
-        return redirect('/admin/users');
+        return redirect('/admin/auth/users');
     }
 }

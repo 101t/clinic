@@ -52,7 +52,7 @@
                             <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
                                 <a href="javascript:void(0);" class="dropdown-toggle s-header-v2__nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ __('Hair Transplantation') }} <span class="g-font-size-10--xs g-margin-l-5--xs ti-angle-down"></span></a>
                                 <ul class="dropdown-menu s-header-v2__dropdown-menu">
-                                    @forelse (\App\Models\HairTrans::all()->take(10) as $hairtrans)
+                                    @forelse (\App\Models\HairTrans::where("lang", LaravelLocalization::getCurrentLocale())->take(10)->get() as $hairtrans)
                                     <li><a href="{{ route('web:hairtrans_detail', [$hairtrans->slug]) }}" class="s-header-v2__dropdown-menu-link">{{ $hairtrans->name }}</a></li>
                                     @empty
                                     @endforelse
@@ -61,7 +61,7 @@
                             <li class="dropdown s-header-v2__nav-item s-header-v2__dropdown-on-hover">
                                 <a href="javascript:void(0);" class="dropdown-toggle s-header-v2__nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ __('Patient Guide') }} <span class="g-font-size-10--xs g-margin-l-5--xs ti-angle-down"></span></a>
                                 <ul class="dropdown-menu s-header-v2__dropdown-menu">
-                                    @forelse (\App\Models\PatientGuide::all()->take(10) as $patientguide)
+                                    @forelse (\App\Models\PatientGuide::where("lang", LaravelLocalization::getCurrentLocale())->take(10)->get() as $patientguide)
                                     <li><a href="{{ route('web:patientguide_detail', [$patientguide->slug]) }}" class="s-header-v2__dropdown-menu-link">{{ $patientguide->name }}</a></li>
                                     @empty
                                     @endforelse

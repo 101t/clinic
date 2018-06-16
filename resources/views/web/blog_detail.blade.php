@@ -39,20 +39,17 @@
     </div>
     <div class="row">
         <div class="col-md-12">
+            <p><strong>{{ __("Comments") }}</strong></p>
+            @includeWhen(Auth::user(), 'web.layouts._commentform')
             @forelse ($post->comments as $comment)
-                <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:#ecf0f1;">
+                <p>{{ $comment->body }} <br>
+                    <small style="font-size:70%;font-weight:bold;">
                         {{ $comment->user->name }}
-                        <span class="pull-right">{{ $comment->created_at->diffForHumans() }}</span>
-                    </div>
-
-                    <div class="panel-body">
-                        <p>{{ $comment->body }}</p>
-                    </div>
-                </div>
+                        <span> . {{ $comment->created_at->diffForHumans() }}</span>
+                    </small>
+                </p>
             @empty
                 <div class="panel panel-default">
-                    <div class="panel-heading" style="background-color:#ecf0f1;">{{ __("Not comment found") }}</div>
                     <div class="panel-body">
                         <p>{{ __("No comment found for this post.") }}</p>
                     </div>

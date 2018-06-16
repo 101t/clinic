@@ -34,6 +34,7 @@ Route::group([
 		//Route::get('/', function () {return view('welcome');});
 		Route::get('/', 'HomeController@index')->name("web.home");
 		Route::get('/about', 'AboutController@index')->name("web.about");
+		Route::post('/blog/{slug}/comment', 'BlogController@comment')->name("web.blog_comment")->middleware('auth');
 		Route::get('/blog/{slug}', 'BlogController@detail')->name("web.blog_detail");
 		Route::get('/blog', 'BlogController@index')->name("web.blog");
 		Route::get('/contacts', 'ContactsController@index')->name("web.contacts");
@@ -72,7 +73,7 @@ Route::group([
 Route::group([
 	'prefix' => '/admin',
 	'namespace' => 'Admin',
-	'middleware' => 'auth',
+	'middleware' => 'admin',
 	], function(){
 		Route::get('/home', 'HomeController@index')->name('admin:home');
 		// Content
@@ -132,5 +133,11 @@ Route::group([
 				// Dpctors
 				Route::match(['get', 'post'], '/generalconfig/manage', 'GeneralConfigController@manage')->name('admin:settings_generalconfig_manage');
 				Route::get('/generalconfig', 'GeneralConfigController@index')->name('admin:settings_generalconfig');
+		});
+		Route::group([
+			'prefix' => '/auth',
+			'namespace' => 'User'
+		], function(){
+			Route::resource('/users', 'UserController', ['only' => ['index', 'destroy']]);
 		});
 });

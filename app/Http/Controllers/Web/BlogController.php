@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller{
 	public function __construct(){
@@ -24,5 +25,16 @@ class BlogController extends Controller{
 	public function detail($slug){
 		$post = Post::whereSlug($slug)->first()->load(['comments.user', 'tags', 'user', 'category']);
 		return view('web.blog_detail', get_defined_vars());
+	}
+	public function comment(Request $request, $slug){
+		$post = Post::whereSlug($slug)->first();
+		$this->validate($request, ['body' => 'required']);
+
+        $post->comments()->create([
+            'body' => $request->body
+        ]);
+        flash()->overlay('Comment successfully created');
+
+        return redirect("/blog/{$post->slug}");
 	}
 }
